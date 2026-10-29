@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FILOVA Backup</title>
+<meta name="description" content="FILOVA Backup stores its owner's encrypted backups in the owner's own Google Drive.">
+<style>
+  :root { color-scheme: light dark; --fg: #1d1d1f; --muted: #555; --bg: #fff; --line: #ddd; --link: #0b57d0; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #ececec; --muted: #aaa; --bg: #161616; --line: #333; --link: #8ab4f8; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1rem 3rem; }
+  h1 { font-size: 1.8rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; }
+  p.lead { color: var(--muted); margin-top: 0; }
+  code { font-size: .9em; overflow-wrap: anywhere; }
+  a { color: var(--link); }
+  footer { border-top: 1px solid var(--line); margin-top: 2.5rem; padding-top: 1rem; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>FILOVA Backup</h1>
+  <p class="lead">Encrypted backups in your own Google Drive, for a single owner's personal use.</p>
+
+  <h2>What it does</h2>
+  <p>FILOVA Backup is a desktop application that its owner runs on their own computer. It uses the open-source
+     tools <a href="https://restic.net/">restic</a> and <a href="https://rclone.org/">rclone</a> to keep backups of
+     the owner's files in a folder of the owner's Google Drive.</p>
+  <ul>
+    <li>Backup contents are encrypted on the computer before they are uploaded, and the backup password is never
+        uploaded to Google Drive. The backup folder also holds the repository files restic needs: key files that
+        contain the repository key encrypted with the backup password, and some technical details that are not
+        encrypted, such as file sizes and dates (see the <a href="privacy.html">Privacy Policy</a>).</li>
+    <li>The application creates one backup folder in Google Drive and uses only that folder.</li>
+    <li>It reads the Drive storage total and usage, so the owner is warned before the space runs out.</li>
+  </ul>
+
+  <h2>Google permission</h2>
+  <p>FILOVA Backup asks for one permission: <code>https://www.googleapis.com/auth/drive.file</code>. With it, an
+     application can reach only the Google Drive files it created, or files the user explicitly opened or shared with
+     it, for example through a Google file picker. It cannot see the rest of Google Drive.</p>
+  <p>FILOVA Backup has no file picker and never asks for files to be shared with it: it uses only the backup folder it
+     created and the files in that folder.</p>
+
+  <h2>Who can use it</h2>
+  <p>This is not a public service. There is no sign-up, no server and no other users: the application runs only on its
+     owner's computer, with the owner's Google account.</p>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</main>
+</body>
+</html>

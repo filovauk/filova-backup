@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FILOVA Backup Privacy Policy</title>
+<meta name="description" content="How FILOVA Backup accesses, uses, stores and shares Google user data.">
+<style>
+  :root { color-scheme: light dark; --fg: #1d1d1f; --muted: #555; --bg: #fff; --line: #ddd; --link: #0b57d0; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #ececec; --muted: #aaa; --bg: #161616; --line: #333; --link: #8ab4f8; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1rem 3rem; }
+  h1 { font-size: 1.8rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; }
+  p.lead { color: var(--muted); margin-top: 0; }
+  code { font-size: .9em; overflow-wrap: anywhere; }
+  a { color: var(--link); }
+  footer { border-top: 1px solid var(--line); margin-top: 2.5rem; padding-top: 1rem; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="lead">FILOVA Backup · Effective 29 October 2026</p>
+
+  <p>FILOVA Backup is a desktop application that its owner runs on their own computer, for personal use, to keep
+     encrypted backups in their own Google Drive. It is not offered to other users. This policy explains how it
+     accesses, uses, stores and shares Google user data.</p>
+
+  <h2>Data the application accesses</h2>
+  <ul>
+    <li>With the <code>https://www.googleapis.com/auth/drive.file</code> permission, an application can reach only
+        the Google Drive files it created, or files the user explicitly opened or shared with it, for example through
+        a Google file picker. FILOVA Backup has no file picker and never asks for files to be shared with it: it uses
+        only the backup folder it created and the files in that folder. It cannot see the rest of Google Drive.</li>
+    <li>The Google Drive storage total and usage of the account.</li>
+  </ul>
+  <p>It does not access email, contacts, calendar, photos or any other Google service.</p>
+
+  <h2>How the data is used</h2>
+  <ul>
+    <li>To create the backup folder, and to upload, list, download and delete the backup files in it.</li>
+    <li>To warn the owner before the Google Drive storage runs out.</li>
+  </ul>
+  <p>Google user data is used for nothing else: not for advertising, not for analytics and not to train
+     artificial intelligence or machine learning models.</p>
+
+  <h2>How the data is stored</h2>
+  <ul>
+    <li>Backup contents, including file names and folder structure, are encrypted with restic on the owner's computer
+        before they are uploaded. The backup password is not uploaded to Google Drive.</li>
+    <li>The backup folder also holds restic's repository files. Its key files contain the repository key encrypted
+        with the backup password, together with technical details in plain text: when the key was created, the user
+        and computer name that created it, and the key-derivation settings. The stored files are named by content
+        hashes, and their names, number, sizes and dates are visible to Google Drive.</li>
+    <li>The Google sign-in token is stored only on the owner's computer, in an encrypted configuration file.</li>
+    <li>The application has no server. Data moves only between the owner's computer and the owner's Google Drive.</li>
+  </ul>
+
+  <h2>Sharing</h2>
+  <p>Google user data is not shared, sold or transferred to anyone.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>Backups are kept in the owner's Google Drive until the owner's retention rules or the owner remove them.
+     Deleting the backup folder in Google Drive removes them. Access can be withdrawn at any time under
+     <a href="https://myaccount.google.com/connections">Google Account › Third-party apps &amp; services</a>.</p>
+
+  <h2>Google API Services User Data Policy</h2>
+  <p>FILOVA Backup's use and transfer of information received from Google APIs adheres to the
+     <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data
+     Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>Changes and contact</h2>
+  <p>Changes to this policy are published on this page with a new effective date. Questions can be sent to the
+     support email shown on the application's Google sign-in screen.</p>
+
+  <footer>
+    <a href="./">FILOVA Backup home</a>
+  </footer>
+</main>
+</body>
+</html>
